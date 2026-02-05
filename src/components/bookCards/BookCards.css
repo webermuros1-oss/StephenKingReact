@@ -1,0 +1,132 @@
+.book-cards {
+    padding: 5rem 0;
+    background: linear-gradient(to bottom, #000000, #111827, #000000);
+    position: relative;
+}
+
+.book-cards-title {
+    font-family: 'Creepster', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--blood-red);
+    margin-bottom: 3rem;
+    letter-spacing: 0.05em;
+}
+
+.book-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.book-card {
+    background: var(--gray-900);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--gray-800);
+    transition: all 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--blood-red);
+    box-shadow: 0 20px 40px rgba(138, 3, 3, 0.5);
+}
+
+.book-card-image-wrapper {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.book-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.book-card:hover .book-card-image {
+    transform: scale(1.1);
+}
+
+.book-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.book-card:hover .book-card-overlay {
+    opacity: 1;
+}
+
+.book-card-content {
+    padding: 1.5rem;
+}
+
+.book-card-title {
+    font-family: 'Creepster', cursive;
+    font-size: 1.25rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.book-card-info {
+    font-family: 'Cinzel', serif;
+    font-size: 0.875rem;
+}
+
+.book-card-year {
+    color: var(--blood-red);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.book-card-publisher,
+.book-card-isbn {
+    color: var(--gray-300);
+    margin-bottom: 0.25rem;
+}
+
+.book-cards-loading,
+.book-cards-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+    background: #000000;
+}
+
+.book-cards-error-text {
+    color: var(--white);
+    font-size: 1.25rem;
+    font-family: 'Cinzel', serif;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+    .book-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .book-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .book-cards-title {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .book-cards-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

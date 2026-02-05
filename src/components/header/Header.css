@@ -1,0 +1,218 @@
+/* src/components/Header.css - VERSIÓN COMPACTA */
+:root {
+    --blood-red: #8a0303;
+    --white: #ffffff;
+    --dark-bg: rgba(0, 0, 0, 0.95);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--dark-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(138, 3, 3, 0.25);
+    box-shadow:
+        0 6px 24px rgba(0, 0, 0, 0.5),
+        0 0 16px rgba(138, 3, 3, 0.15);
+    padding: 0.5rem 0;
+    /* ← MÁS compacto */
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    /* ← REDUCIDO */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* ← LOGO IZQUIERDA / BOTONES DERECHA */
+    height: 70px;
+    /* ← Altura fija compacta */
+}
+
+/* Logo - IZQUIERDA */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    /* ← MENOS espacio */
+    text-decoration: none;
+}
+
+.logo-container {
+    position: relative;
+    padding: 2px;
+    /* ← Marco sutil */
+}
+
+.logo-glow {
+    position: absolute;
+    inset: -2px;
+    background: var(--blood-red);
+    filter: blur(12px);
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+    border-radius: 50%;
+}
+
+.logo-section:hover .logo-glow {
+    opacity: 0.7;
+}
+
+.logo-img {
+    height: 42px;
+    /* ← MÁS PEQUEÑO */
+    width: auto;
+    position: relative;
+    z-index: 10;
+    filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.7));
+    border-radius: 8px;
+}
+
+.logo-title {
+    font-family: 'Creepster', cursive;
+    font-size: 1.5rem;
+    /* ← MÁS pequeño */
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: linear-gradient(to right, var(--white), #fecaca, var(--blood-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+    .logo-title {
+        font-size: 1.75rem;
+    }
+}
+
+/* Desktop Navigation - DERECHA */
+.desktop-nav {
+    display: none;
+    align-items: center;
+    gap: 1.5rem;
+    /* ← MENOS espacio */
+    margin-left: auto;
+    /* ← SE EMPUJA A LA DERECHA */
+}
+
+@media (min-width: 768px) {
+    .desktop-nav {
+        display: flex;
+    }
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.4rem 0.8rem;
+    /* ← MÁS compacto */
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+    border-radius: 6px;
+}
+
+.nav-link span {
+    position: relative;
+    z-index: 10;
+}
+
+.nav-link-bg {
+    position: absolute;
+    inset: 0;
+    background: rgba(138, 3, 3, 0);
+    border-radius: 6px;
+    transition: background 0.25s ease;
+}
+
+.nav-link:hover {
+    color: var(--blood-red);
+    transform: translateY(-1px);
+}
+
+.nav-link:hover .nav-link-bg {
+    background: rgba(138, 3, 3, 0.12);
+}
+
+/* Mobile Button - DERECHA */
+.mobile-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(138, 3, 3, 0.15);
+    border: 1px solid rgba(138, 3, 3, 0.3);
+    border-radius: 8px;
+    color: var(--white);
+    cursor: pointer;
+    padding: 0.4rem;
+    transition: all 0.25s ease;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    /* ← SE EMPUJA A LA DERECHA */
+}
+
+.mobile-button:hover {
+    background: var(--blood-red);
+    box-shadow: 0 0 15px rgba(138, 3, 3, 0.5);
+    transform: scale(1.05);
+}
+
+.mobile-svg {
+    width: 24px;
+    height: 24px;
+}
+
+@media (min-width: 768px) {
+    .mobile-button {
+        display: none;
+    }
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+    margin-top: 0.75rem;
+}
+
+.mobile-nav.open {
+    max-height: 160px;
+}
+
+.mobile-nav-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
+    border: 1px solid rgba(138, 3, 3, 0.25);
+}
+
+.mobile-nav-link {
+    padding: 0.4rem 0.75rem;
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+}
+
+.mobile-nav-link:hover {
+    color: var(--blood-red);
+    background: rgba(138, 3, 3, 0.15);
+}

@@ -1,0 +1,57 @@
+.home-page {
+    min-height: 100vh;
+    background: #c44d4d;
+}
+
+.home-carousel-section {
+    position: relative;
+}
+
+.home-carousel-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 128px;
+    background: linear-gradient(to top, #000000, transparent);
+    pointer-events: none;
+}
+
+.home-divider {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.home-divider-line {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+}
+
+.home-divider-line::before {
+    content: '';
+    flex: 1;
+    border-top: 1px solid rgba(138, 3, 3, 0.2);
+}
+
+.home-divider-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.home-divider-text {
+    padding: 0 1.5rem;
+    background: #813232;
+    color: var(--blood-red);
+    font-family: 'Creepster', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+    .home-divider-text {
+        font-size: 2rem;
+    }
+}

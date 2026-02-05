@@ -36,28 +36,28 @@
             "ISBN": "978-0-670-81364-6"
         },
         {
-            "image": "/images/books/thestand.jpg",
+            "image": "/images/books/theStand.jpg",
             "Title": "The Stand",
             "Year": 1978,
             "Publisher": "Doubleday",
             "ISBN": "978-0-385-12168-2"
         },
         {
-            "image": "public/images/books/pet-sematary.jpg",
+            "image": "public/images/books/petSematary.jpg",
             "Title": "Pet Sematary",
             "Year": 1983,
             "Publisher": "Doubleday",
             "ISBN": "978-0-385-18244-7"
         },
         {
-            "image": "public/images/books/salems-lot.jpg",
+            "image": "public/images/books/salemsLot.jpg",
             "Title": "Salem's Lot",
             "Year": 1975,
             "Publisher": "Doubleday",
             "ISBN": "978-0-385-00751-0"
         },
         {
-            "image": "public/images/books/the-dark-tower.jpg",
+            "image": "public/images/books/theDarkTower.jpg",
             "Title": "The Dark Tower",
             "Year": 1982,
             "Publisher": "Donald M. Grant",
