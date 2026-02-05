@@ -11,8 +11,8 @@ export default {
                 'dark-red': '#6d0202',
             },
             fontFamily: {
-                'creepster': ['Creepster', 'cursive'],
-                'cinzel': ['Cinzel', 'serif'],
+                creepster: ['Creepster', 'cursive'],
+                cinzel: ['Cinzel', 'serif'],
             },
         },
     },

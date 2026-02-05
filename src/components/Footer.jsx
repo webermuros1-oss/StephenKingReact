@@ -1,191 +1,140 @@
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Add newsletter subscription logic here
+        console.log('Newsletter subscription');
     };
 
     return (
-        <footer className="bg-black text-white pt-12">
-            <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <footer className="relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-blood-red/30">
+            {/* Decorative top line */}
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blood-red to-transparent"></div>
+
+            <div className="container mx-auto px-6 py-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                     {/* About Section */}
-                    <div>
-                        <h3 className="text-[#8a0303] text-xl font-bold mb-4 font-['Creepster']">
-                            Acerca de Stephen King
+                    <div className="space-y-4">
+                        <h3 className="text-2xl font-creepster text-blood-red mb-4">
+                            Stephen King
                         </h3>
-                        <p className="mb-4 text-gray-300 font-['Cinzel']">
-                            Stephen King el "Maestro del Terror", cuyas novelas han redefinido el género.
+                        <p className="text-gray-400 font-cinzel leading-relaxed">
+                            El "Maestro del Terror", cuyas novelas han redefinido el género del horror.
                         </p>
-                        <div className="flex gap-4 mb-4">
-                            <a
-                                href="https://www.facebook.com/todostephenking?locale=es_ES"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:opacity-80 transition-opacity"
-                            >
-                                <img
-                                    src="/images/aboutHe/logoFaceBook.png"
-                                    alt="Facebook"
-                                    className="h-8 w-8"
-                                />
-                            </a>
-                            <a
-                                href="https://www.instagram.com/stephenking/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:opacity-80 transition-opacity"
-                            >
-                                <img
-                                    src="/images/aboutHe/InstagramIcon.png"
-                                    alt="Instagram"
-                                    className="h-8 w-8"
-                                />
-                            </a>
-                            <a
-                                href="https://www.linkedin.com/in/stephen-king-a393a3188/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:opacity-80 transition-opacity"
-                            >
-                                <img
-                                    src="/images/aboutHe/linkedin.png"
-                                    alt="LinkedIn"
-                                    className="h-8 w-8"
-                                />
-                            </a>
+                        <div className="flex gap-4 pt-4">
+                            {[
+                                { href: 'https://www.facebook.com/todostephenking?locale=es_ES', src: '/images/aboutHe/logoFaceBook.png', alt: 'Facebook' },
+                                { href: 'https://www.instagram.com/stephenking/', src: '/images/aboutHe/InstagramIcon.png', alt: 'Instagram' },
+                                { href: 'https://www.linkedin.com/in/stephen-king-a393a3188/', src: '/images/aboutHe/linkedin.png', alt: 'LinkedIn' }
+                            ].map((social, index) => (
+                                <a
+                                    key={index}
+                                    href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group relative"
+                                >
+                                    <div className="absolute inset-0 bg-blood-red blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                                    <img
+                                        src={social.src}
+                                        alt={social.alt}
+                                        className="h-10 w-10 object-contain relative z-10 opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                                    />
+                                </a>
+                            ))}
                         </div>
                     </div>
 
-                    {/* Quick Links Section */}
-                    <div>
-                        <h3 className="text-[#8a0303] text-xl font-bold mb-4 font-['Creepster']">
-                            Enlaces rápidos
+                    {/* Quick Links */}
+                    <div className="space-y-4">
+                        <h3 className="text-xl font-creepster text-blood-red mb-4">
+                            Enlaces Rápidos
                         </h3>
-                        <ul className="space-y-2 font-['Cinzel']">
-                            <li>
-                                <a
-                                    href="/autor"
-                                    className="text-gray-300 hover:text-[#8a0303] transition-colors"
-                                >
-                                    Sobre Stephen King
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://www.amazon.es/stephen-king-merchandising/s?k=stephen+king+merchandising"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-gray-300 hover:text-[#8a0303] transition-colors"
-                                >
-                                    Productos
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://stephenking.com.ar/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-gray-300 hover:text-[#8a0303] transition-colors"
-                                >
-                                    Blog
-                                </a>
-                            </li>
+                        <ul className="space-y-3 font-cinzel">
+                            {[
+                                { to: '/autor', label: 'Sobre Stephen King', internal: true },
+                                { to: 'https://www.amazon.es/stephen-king-merchandising/s?k=stephen+king+merchandising', label: 'Productos' },
+                                { to: 'https://stephenking.com.ar/', label: 'Blog' }
+                            ].map((link, index) => (
+                                <li key={index}>
+                                    {link.internal ? (
+                                        <Link to={link.to} className="text-gray-400 hover:text-blood-red transition-colors duration-300 flex items-center gap-2 group">
+                                            <span className="w-0 h-px bg-blood-red group-hover:w-4 transition-all duration-300"></span>
+                                            {link.label}
+                                        </Link>
+                                    ) : (
+                                        <a href={link.to} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blood-red transition-colors duration-300 flex items-center gap-2 group">
+                                            <span className="w-0 h-px bg-blood-red group-hover:w-4 transition-all duration-300"></span>
+                                            {link.label}
+                                        </a>
+                                    )}
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
-                    {/* Support Section */}
-                    <div>
-                        <h3 className="text-[#8a0303] text-xl font-bold mb-4 font-['Creepster']">
-                            Soporte Técnico
+                    {/* Legal Links */}
+                    <div className="space-y-4">
+                        <h3 className="text-xl font-creepster text-blood-red mb-4">
+                            Información Legal
                         </h3>
-                        <ul className="space-y-2 font-['Cinzel']">
-                            <li>
-                                <a
-                                    href="/pdf/avisoLegal.pdf"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-gray-300 hover:text-[#8a0303] transition-colors"
-                                >
-                                    Aviso Legal
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/pdf/politicaPrivacidadDatos.pdf"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-gray-300 hover:text-[#8a0303] transition-colors"
-                                >
-                                    Política de Privacidad
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/pdf/condicionesGeneralesVenta.pdf"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-gray-300 hover:text-[#8a0303] transition-colors"
-                                >
-                                    Política de Ventas
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="/pdf/politicaCookies(3).pdf"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-gray-300 hover:text-[#8a0303] transition-colors"
-                                >
-                                    Política de Cookies
-                                </a>
-                            </li>
+                        <ul className="space-y-3 font-cinzel">
+                            {[
+                                { href: '/pdf/avisoLegal.pdf', label: 'Aviso Legal' },
+                                { href: '/pdf/politicaPrivacidadDatos.pdf', label: 'Privacidad' },
+                                { href: '/pdf/condicionesGeneralesVenta.pdf', label: 'Ventas' },
+                                { href: '/pdf/politicaCookies(3).pdf', label: 'Cookies' }
+                            ].map((link, index) => (
+                                <li key={index}>
+                                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blood-red transition-colors duration-300 flex items-center gap-2 group">
+                                        <span className="w-0 h-px bg-blood-red group-hover:w-4 transition-all duration-300"></span>
+                                        {link.label}
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
-                    {/* Newsletter Section */}
-                    <div>
-                        <h3 className="text-[#8a0303] text-xl font-bold mb-4 font-['Creepster']">
+                    {/* Newsletter */}
+                    <div className="space-y-4">
+                        <h3 className="text-xl font-creepster text-blood-red mb-4">
                             Newsletter
                         </h3>
-                        <p className="mb-4 text-gray-300 font-['Cinzel']">
-                            Suscríbete a nuestro boletín para recibir actualizaciones, novedades y ofertas
-                            exclusivas.
+                        <p className="text-gray-400 font-cinzel text-sm leading-relaxed">
+                            Recibe las últimas novedades y ofertas exclusivas.
                         </p>
-                        <form onSubmit={handleSubmit} className="mb-4">
-                            <div className="flex">
-                                <input
-                                    type="email"
-                                    className="flex-1 px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-l-md focus:outline-none focus:border-[#8a0303]"
-                                    placeholder="Enter your email"
-                                    required
-                                />
-                                <button
-                                    type="submit"
-                                    className="px-6 py-2 bg-[#8a0303] text-white font-bold rounded-r-md hover:bg-[#6d0202] transition-colors"
-                                >
-                                    Suscríbete
-                                </button>
-                            </div>
+                        <form onSubmit={handleSubmit} className="space-y-3">
+                            <input
+                                type="email"
+                                placeholder="tu@email.com"
+                                className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blood-red transition-colors duration-300"
+                                required
+                            />
+                            <button
+                                type="submit"
+                                className="w-full px-6 py-3 bg-gradient-to-r from-blood-red to-dark-red text-white font-bold rounded-lg hover:shadow-lg hover:shadow-blood-red/50 transition-all duration-300 transform hover:-translate-y-0.5"
+                            >
+                                Suscribirse
+                            </button>
                         </form>
-                        <p className="text-sm text-gray-400 font-['Cinzel']">
-                            Al suscribirse, acepta nuestra Política de privacidad y da su consentimiento para
-                            recibir actualizaciones.
+                        <p className="text-xs text-gray-500 font-cinzel">
+                            Al suscribirte aceptas nuestra política de privacidad.
                         </p>
                     </div>
                 </div>
             </div>
 
-            {/* Footer Bottom */}
-            <div className="border-t border-gray-800 mt-12">
-                <div className="container mx-auto px-4">
-                    <div className="py-6 flex flex-col md:flex-row justify-between items-center">
-                        <h6 className="text-gray-400 mb-4 md:mb-0 font-['Cinzel']">
-                            &copy; 2025 Stephen King. Todos los derechos reservados.
-                        </h6>
+            {/* Bottom Bar */}
+            <div className="border-t border-gray-800">
+                <div className="container mx-auto px-6 py-6">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                        <p className="text-gray-500 font-cinzel text-sm">
+                            © 2025 Stephen King. Todos los derechos reservados.
+                        </p>
                         <img
                             src="/images/aboutHe/logoStephenKingSinBordes.png"
-                            alt="Logo Stephen King"
-                            className="h-8 w-auto"
+                            alt="Logo"
+                            className="h-8 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300"
                         />
                     </div>
                 </div>

@@ -1,35 +1,35 @@
 {
     "data": [
         {
-            "image": "/images/books/carrie.jpg",
+            "image": "public/images/books/carrie.jpg",
             "Title": "Carrie",
             "Year": 1974,
             "Publisher": "Doubleday",
             "ISBN": "978-0-385-08695-0"
         },
         {
-            "image": "/images/books/theshining.jpg",
+            "image": "public/images/books/theshining.jpg",
             "Title": "The Shining",
             "Year": 1977,
             "Publisher": "Doubleday",
             "ISBN": "978-0-385-12167-5"
         },
         {
-            "image": "/images/books/it.jpg",
+            "image": "public/images/books/it.jpg",
             "Title": "IT",
             "Year": 1986,
             "Publisher": "Viking",
             "ISBN": "978-0-670-81302-8"
         },
         {
-            "image": "/images/books/thegreenmill.jpg",
+            "image": "public/images/books/thegreenmill.jpg",
             "Title": "The Green Mile",
             "Year": 1996,
             "Publisher": "Signet Books",
             "ISBN": "978-0-451-93303-9"
         },
         {
-            "image": "/images/books/misery.jpg",
+            "image": "public/images/books/misery.jpg",
             "Title": "Misery",
             "Year": 1987,
             "Publisher": "Viking",
@@ -43,28 +43,28 @@
             "ISBN": "978-0-385-12168-2"
         },
         {
-            "image": "/images/books/pet-sematary.jpg",
+            "image": "public/images/books/pet-sematary.jpg",
             "Title": "Pet Sematary",
             "Year": 1983,
             "Publisher": "Doubleday",
             "ISBN": "978-0-385-18244-7"
         },
         {
-            "image": "/images/books/salems-lot.jpg",
+            "image": "public/images/books/salems-lot.jpg",
             "Title": "Salem's Lot",
             "Year": 1975,
             "Publisher": "Doubleday",
             "ISBN": "978-0-385-00751-0"
         },
         {
-            "image": "/images/books/the-dark-tower.jpg",
+            "image": "public/images/books/the-dark-tower.jpg",
             "Title": "The Dark Tower",
             "Year": 1982,
             "Publisher": "Donald M. Grant",
             "ISBN": "978-0-937986-85-3"
         },
         {
-            "image": "/images/books/christine.jpg",
+            "image": "public/images/books/christine.jpg",
             "Title": "Christine",
             "Year": 1983,
             "Publisher": "Viking",

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const BookCards = () => {
     const [books, setBooks] = useState([]);
@@ -8,10 +9,8 @@ const BookCards = () => {
     useEffect(() => {
         const fetchBooks = async () => {
             try {
-                const response = await fetch('/json/cardsAndTable.json');
-                if (!response.ok) throw new Error('Error al cargar data');
-                const data = await response.json();
-                setBooks(data.data || []);
+                const response = await axios.get('public/cardsAndTable.json');
+                setBooks(response.data.data || []);
                 setLoading(false);
             } catch (err) {
                 console.error(err);
@@ -26,7 +25,7 @@ const BookCards = () => {
     if (loading) {
         return (
             <div className="flex justify-center items-center py-20">
-                <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#8a0303]"></div>
+                <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-blood-red"></div>
             </div>
         );
     }
@@ -34,7 +33,7 @@ const BookCards = () => {
     if (error) {
         return (
             <div className="text-center py-20">
-                <p className="text-white text-xl font-['Cinzel']">{error}</p>
+                <p className="text-white text-xl font-cinzel">{error}</p>
             </div>
         );
     }
@@ -45,7 +44,7 @@ const BookCards = () => {
             <div className="absolute inset-0 bg-[url('/images/texture.jpg')] opacity-10"></div>
 
             <div className="container mx-auto px-4 relative z-10">
-                <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[#8a0303] font-['Creepster'] tracking-wider">
+                <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-blood-red font-creepster tracking-wider">
                     Los 10 mejores libros de Stephen King
                 </h2>
 
@@ -53,7 +52,7 @@ const BookCards = () => {
                     {books.map((book, index) => (
                         <div
                             key={index}
-                            className="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-[#8a0303]/50 transition-all duration-300 transform hover:-translate-y-2 border border-gray-800 hover:border-[#8a0303]"
+                            className="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blood-red/50 transition-all duration-300 transform hover:-translate-y-2 border border-gray-800 hover:border-blood-red"
                         >
                             <div className="relative h-72 overflow-hidden">
                                 <img
@@ -65,11 +64,11 @@ const BookCards = () => {
                             </div>
 
                             <div className="p-4">
-                                <h4 className="text-xl font-bold text-white mb-2 font-['Creepster'] truncate">
+                                <h4 className="text-xl font-bold text-white mb-2 font-creepster truncate">
                                     {book.Title}
                                 </h4>
-                                <div className="space-y-1 font-['Cinzel']">
-                                    <h5 className="text-[#8a0303] font-semibold">
+                                <div className="space-y-1 font-cinzel">
+                                    <h5 className="text-blood-red font-semibold">
                                         Año: {book.Year}
                                     </h5>
                                     <h5 className="text-gray-300 text-sm">

@@ -1,27 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Footer from "./components/Footer"
-import Header from "./components/Header"
-import Carousel from './components/Carrousel'
-import BookCards from './components/BookCards'
-import BooksTable from './components/BooksTable'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import HomePage from "./Pages/HomePage"
+import AboutPage from './Pages/AboutPage'
 
-import './App.css'
+
 function App() {
   return (
-    <div>
-      <Header/>
-      <h1 className="text-3xl font-bold text-center  bg-black text-red-700 py-4">
-        Sthephen King
-      </h1>
-      <Carousel />
-      <BookCards />
-      <BooksTable />
-      <Footer/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/autor" element={<AboutPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
 export default App
-
