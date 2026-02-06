@@ -12,7 +12,7 @@ const BookCards = () => {
                 console.log('🔄 Cargando JSON...');
                 
                 // ✅ fetch() para archivos locales ES MÁS CONFIABLE
-                const response = await fetch('public/cardsAndTable.json');
+                const response = await fetch('/cardsAndTable.json');
                 
                 if (!response.ok) {
                     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
