@@ -10,7 +10,7 @@ const Header = () => {
         <header className="header">
             <nav className="nav">
                 <div className="nav-main">
-                    {/* Logo Section */}
+                    
                     <Link to="/" className="logo-section group">
                         <div className="logo-container">
                             <div className="logo-glow"></div>
@@ -23,7 +23,7 @@ const Header = () => {
                         <h1 className="logo-title">STEPHEN KING</h1>
                     </Link>
 
-                    {/* Desktop Navigation */}
+                    
                     <div className="desktop-nav">
                         <Link to="/" className="nav-link group">
                             <span className="nav-link-text">Inicio</span>
@@ -35,7 +35,7 @@ const Header = () => {
                         </Link>
                     </div>
 
-                    {/* Mobile Menu Button */}
+                    
                     <button
                         className="mobile-button"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -51,7 +51,7 @@ const Header = () => {
                     </button>
                 </div>
 
-                {/* Mobile Navigation */}
+                
                 <div className={`mobile-nav ${isMenuOpen ? 'open' : ''}`}>
                     <div className="mobile-nav-container">
                         <Link

@@ -70,19 +70,13 @@
     font-size: 1.25rem;
     color: var(--white);
     margin-bottom: 1rem;
-    /* Removemos white-space: nowrap; y text-overflow */
-    /* white-space: nowrap; */
-    /* overflow: hidden; */
-    /* text-overflow: ellipsis; */
-    
-    /* Mejoras para legibilidad */
     line-height: 1.4;
     letter-spacing: 0.02em;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Limita a 2 líneas */
+    -webkit-line-clamp: 2; 
     -webkit-box-orient: vertical;
-    min-height: 2.5rem; /* Mantiene altura consistente */
+    min-height: 2.5rem; 
 }
 
 .book-card-info {
@@ -117,7 +111,7 @@
     font-family: 'Cinzel', serif;
 }
 
-/* Responsive */
+
 @media (min-width: 640px) {
     .book-cards-grid {
         grid-template-columns: repeat(2, 1fr);

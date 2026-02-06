@@ -11,7 +11,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="container footer-content">
                 <div className="footer-grid">
-                    {/* COLUMNA 1: LOGO SOLO */}
+                
                     <div className="footer-section footer-section-logo">
                         <div className="footer-logo-section">
                             <img
@@ -22,7 +22,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* COLUMNA 2: About + Social */}
+                    
                     <div className="footer-section">
                         <h3>Stephen King</h3>
                         <p>El "Maestro del Terror", cuyas novelas han redefinido el género del horror.</p>
@@ -42,7 +42,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* COLUMNA 3: Enlaces Rápidos */}
+                    
                     <div className="footer-section">
                         <h3>Enlaces Rápidos</h3>
                         <ul className="footer-links">
@@ -52,7 +52,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* COLUMNA 4: Legal */}
+                    
                     <div className="footer-section">
                         <h3>Información Legal</h3>
                         <ul className="footer-links">
@@ -63,7 +63,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* COLUMNA 5: Newsletter ARRIBA */}
+                    
                     <div className="footer-section">
                         <h3>Newsletter</h3>
                         <p>Recibe las últimas novedades y ofertas exclusivas.</p>
@@ -76,7 +76,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Bottom centrado */}
+            
             <div className="footer-bottom">
                 <div className="container footer-bottom-content">
                     <p className="footer-copyright">© 2025 Stephen King. Todos los derechos reservados.</p>

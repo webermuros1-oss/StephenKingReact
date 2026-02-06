@@ -107,7 +107,7 @@
     font-family: 'Cinzel', serif;
 }
 
-/* Responsive */
+
 @media (min-width: 1024px) {
     .books-table-title {
         font-size: 3rem;

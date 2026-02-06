@@ -1,4 +1,4 @@
-/* src/components/Header.css - LOGO + TÍTULO IZQUIERDA / BOTONES DERECHA */
+
 :root {
     --blood-red: #8a0303;
     --white: #ffffff;
@@ -27,7 +27,7 @@ nav {
     gap: 0;
 }
 
-/* Contenedor principal - Logo izquierda / Botones derecha */
+
 .nav-main {
     display: flex;
     align-items: center;
@@ -37,7 +37,7 @@ nav {
     padding: 0.5rem 0;
 }
 
-/* LOGO + TÍTULO - IZQUIERDA TOTAL */
+
 .logo-section {
     display: flex;
     align-items: center;
@@ -66,7 +66,7 @@ nav {
 }
 
 .logo-img {
-    height: 60px !important;  /* ← Aumentado de 52px a 60px */
+    height: 60px !important;  
     width: auto;
     position: relative;
     z-index: 10;
@@ -86,7 +86,7 @@ nav {
 
 .logo-title {
     font-family: 'Creepster', cursive;
-    font-size: 1.6rem;  /* ← Aumentado un poco */
+    font-size: 1.6rem;  
     font-weight: 400;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -100,7 +100,7 @@ nav {
 
 @media (min-width: 768px) {
     .logo-img {
-        height: 66px !important;  /* ← Aún más grande en desktop */
+        height: 66px !important; 
     }
     
     .logo-title {
@@ -108,7 +108,7 @@ nav {
     }
 }
 
-/* BOTONES DESKTOP - DERECHA TOTAL */
+
 .desktop-nav {
     display: none;
     align-items: center;
@@ -122,7 +122,7 @@ nav {
     }
 }
 
-/* BOTÓN MÓVIL - DERECHA TOTAL */
+
 .mobile-button {
     display: flex;
     align-items: center;
@@ -156,7 +156,7 @@ nav {
     }
 }
 
-/* NAV LINKS (desktop + mobile) */
+
 .nav-link {
     position: relative;
     padding: 0.5rem 1rem;
@@ -209,7 +209,7 @@ nav {
     background: rgba(138, 3, 3, 0.15);
 }
 
-/* Mobile Navigation */
+
 .mobile-nav {
     overflow: hidden;
     max-height: 0;

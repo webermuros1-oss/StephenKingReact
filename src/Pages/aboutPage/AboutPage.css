@@ -1,6 +1,3 @@
-
-
-/* Hero Section */
 .about-hero {
     position: relative;
     overflow: hidden;
@@ -38,19 +35,9 @@
     margin: 0 auto;
 }
 
-
-
-
-
-
-
-
-
-
-/* Bio Section */
 .about-bio {
     padding: 3rem 0;
-    
+
 }
 
 .about-bio-grid {
@@ -296,7 +283,7 @@
     text-decoration: none;
 }
 
-/* Responsive */
+
 @media (min-width: 768px) {
     .about-hero-title {
         font-size: 5rem;
