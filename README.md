@@ -1,15 +1,18 @@
 # Stephen King Website - React + Tailwind
 
-Este es el proyecto de Stephen King convertido de HTML/CSS/JS vanilla a React con Tailwind CSS.
+Este es el proyecto de Stephen King convertido de HTML/CSS/JS vanilla a React con CSS.
+
+## Screenshot
+
+![alt text](public/images/logo/captura.png)
 
 ## 🚀 Características
 
 - ✅ Header y Footer como componentes reutilizables
-- ✅ Carrusel de videos con transiciones suaves
 - ✅ Tarjetas de libros con datos de JSON local
 - ✅ Tabla de libros con datos de la API de Stephen King
 - ✅ Página "Acerca del Autor"
-- ✅ Diseño responsive con Tailwind CSS
+- ✅ Diseño responsive
 - ✅ Fuentes personalizadas (Creepster y Cinzel)
 - ✅ Tema oscuro con colores rojos
 
@@ -21,13 +24,7 @@ npm create vite@latest stephen-king-react -- --template react
 cd stephen-king-react
 ```
 
-2. Instalar Tailwind CSS:
-```bash
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
-
-3. Instalar dependencias:
+2. Instalar dependencias:
 ```bash
 npm install
 ```
@@ -39,10 +36,10 @@ src/
 ├── components/
 │   ├── Header.jsx
 │   ├── Footer.jsx
-│   ├── Carousel.jsx
 │   ├── BookCards.jsx
 │   └── BooksTable.jsx
 ├── pages/
+│   ├── HomePage.jsx
 │   └── AboutPage.jsx
 ├── App.jsx
 ├── main.jsx
@@ -53,28 +50,6 @@ src/
 
 Reemplaza el contenido de `tailwind.config.js` con:
 
-```javascript
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        'blood-red': '#8a0303',
-        'dark-red': '#6d0202',
-      },
-      fontFamily: {
-        'creepster': ['Creepster', 'cursive'],
-        'cinzel': ['Cinzel', 'serif'],
-      },
-    },
-  },
-  plugins: [],
-}
-```
 
 ## 🖼️ Assets Necesarios
 
@@ -85,28 +60,28 @@ public/
 ├── images/
 │   ├── logo/
 │   │   └── StephenKingLogo.png
-│   ├── aboutHe/
-│   │   ├── logoFaceBook.png
-│   │   ├── InstagramIcon.png
-│   │   ├── linkedin.png
-│   │   ├── cartelCarrie.jpg
-│   │   ├── stephenKingPhoto.jpg
-│   │   └── logoStephenKingSinBordes.png
-│   └── carrousel/
-│       ├── itPoster.jpg
-│       └── longWalkPoster.jpg
-├── videos/
-│   ├── itMovie.mp4
-│   ├── largaMarchaMovie.mp4
-│   ├── peliculaCarrie.mp4
-│   └── trailerLibroFinal.mp4
+│   ├── books/
+│   │   ├── carrie.jpg
+│   │   ├── it.jpg
+│   │   ├── the_shining.jpg
+│   │   └── misery.jpg
+│   └── aboutHe/
+│       ├── logoFaceBook.png
+│       ├── InstagramIcon.png
+│       ├── linkedin.png
+│       ├── cartelCarrie.jpg
+│       ├── stephenKingPhoto.jpg
+│       └── logoStephenKingSinBordes.png
+│
 ├── pdf/
 │   ├── avisoLegal.pdf
 │   ├── politicaPrivacidadDatos.pdf
 │   ├── condicionesGeneralesVenta.pdf
-│   └── politicaCookies(3).pdf
+│   └── politicaCookies.pdf
+│
 └── json/
     └── cardsAndTable.json
+
 ```
 
 ## 🔧 Uso de Componentes
@@ -115,7 +90,6 @@ public/
 ```jsx
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Carousel from './components/Carousel';
 import BookCards from './components/BookCards';
 import BooksTable from './components/BooksTable';
 
@@ -157,12 +131,6 @@ import AboutPage from './pages/AboutPage';
 - Newsletter con formulario
 - Copyright y logo
 
-### Carousel
-- Navegación entre videos
-- Botones prev/next
-- Indicadores de posición
-- Transiciones suaves con opacity
-- Controles de video nativos
 
 ### BookCards
 - Grid responsive
@@ -191,13 +159,6 @@ npm run build
 npm run preview
 ```
 
-## 🎨 Clases Tailwind Personalizadas
-
-- `bg-blood-red` → #8a0303
-- `bg-dark-red` → #6d0202
-- `font-creepster` → Font 'Creepster'
-- `font-cinzel` → Font 'Cinzel'
-
 ## 📱 Responsive
 
 Todos los componentes son completamente responsive con breakpoints:
@@ -214,7 +175,6 @@ Todos los componentes son completamente responsive con breakpoints:
 ## 📝 Notas
 
 - Las fuentes Google Fonts se cargan automáticamente desde el CSS
-- Los videos deben estar en formato MP4
 - Las imágenes deben estar optimizadas para web
 - El JSON local debe tener la estructura correcta con el campo `data`
 
@@ -227,5 +187,14 @@ El proyecto usa una paleta de colores oscura con acentos rojos:
 - Blanco: #ffffff
 
 ## 📄 Licencia
+Licencia MIT
+
+Este proyecto está licenciado bajo la Licencia MIT.
+
+Se concede permiso, de forma gratuita, a cualquier persona que obtenga una copia de este software y de los archivos de documentación asociados (el “Software”), para utilizar el Software sin restricción, incluyendo sin limitación los derechos a usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar y/o vender copias del Software, y a permitir a las personas a las que se les proporcione el Software a hacer lo mismo, sujeto a las siguientes condiciones:
+
+El aviso de copyright anterior y este aviso de permiso se incluirán en todas las copias o partes sustanciales del Software.
+
+EL SOFTWARE SE PROPORCIONA “TAL CUAL”, SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITADO A LAS GARANTÍAS DE COMERCIALIZACIÓN, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DEL COPYRIGHT SERÁN RESPONSABLES DE NINGUNA RECLAMACIÓN, DAÑO U OTRA RESPONSABILIDAD, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O CUALQUIER OTRA FORMA, QUE SURJA DE, O EN CONEXIÓN CON EL SOFTWARE O EL USO U OTRO TIPO DE ACCIONES EN EL SOFTWARE.
 
 © 2025 Stephen King. Todos los derechos reservados.
