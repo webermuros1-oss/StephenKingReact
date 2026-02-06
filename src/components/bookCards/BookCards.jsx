@@ -54,7 +54,7 @@ const BookCards = () => {
     return (
         <div className="book-cards">
             <div className="container">
-                <h2 className="book-cards-title">Los 10 mejores libros de Stephen King</h2>
+                <h2 className="book-cards-title"></h2>
 
                 <div className="book-cards-grid">
                     {books.length > 0 ? (

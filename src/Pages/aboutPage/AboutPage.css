@@ -1,7 +1,4 @@
-.about-page {
-    min-height: 100vh;
-    background: #000000;
-}
+
 
 /* Hero Section */
 .about-hero {
@@ -16,27 +13,7 @@
     background: linear-gradient(to bottom, rgba(138, 3, 3, 0.2), #000000, #000000);
 }
 
-.about-hero-blur1 {
-    position: absolute;
-    top: 5rem;
-    left: 2.5rem;
-    width: 288px;
-    height: 288px;
-    background: rgba(138, 3, 3, 0.1);
-    border-radius: 50%;
-    filter: blur(60px);
-}
 
-.about-hero-blur2 {
-    position: absolute;
-    bottom: 5rem;
-    right: 2.5rem;
-    width: 384px;
-    height: 384px;
-    background: rgba(138, 3, 3, 0.05);
-    border-radius: 50%;
-    filter: blur(60px);
-}
 
 .about-hero-content {
     position: relative;
@@ -56,67 +33,24 @@
 .about-hero-subtitle {
     font-family: 'Cinzel', serif;
     font-size: 1.125rem;
-    color: var(--gray-400);
+    color: white;
     max-width: 42rem;
     margin: 0 auto;
 }
 
-/* Poster Section */
-.about-poster {
-    padding: 3rem 0;
-}
 
-.about-poster-wrapper {
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-}
 
-.about-poster-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, #000000, transparent, transparent);
-    opacity: 0.6;
-    transition: opacity 0.5s;
-}
 
-.about-poster-wrapper:hover .about-poster-overlay {
-    opacity: 0.4;
-}
 
-.about-poster-img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.7s;
-}
 
-.about-poster-wrapper:hover .about-poster-img {
-    transform: scale(1.05);
-}
 
-.about-poster-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 2rem;
-}
 
-.about-poster-title {
-    font-family: 'Creepster', cursive;
-    font-size: 2rem;
-    color: var(--white);
-    margin-bottom: 0.5rem;
-}
 
-.about-poster-text {
-    font-family: 'Cinzel', serif;
-    color: var(--gray-300);
-}
 
 /* Bio Section */
 .about-bio {
     padding: 3rem 0;
+    
 }
 
 .about-bio-grid {
@@ -124,6 +58,7 @@
     grid-template-columns: 1fr;
     gap: 3rem;
     align-items: start;
+    box-shadow: 0px 0px 100px rgba(138, 3, 3, 0.5);
 }
 
 .about-bio-image-wrapper {
@@ -156,6 +91,8 @@
 }
 
 .about-bio-content {
+    padding-left: 5px;
+    background-color: #000000;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;

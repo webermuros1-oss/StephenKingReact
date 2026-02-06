@@ -70,9 +70,19 @@
     font-size: 1.25rem;
     color: var(--white);
     margin-bottom: 1rem;
-    white-space: nowrap;
+    /* Removemos white-space: nowrap; y text-overflow */
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    
+    /* Mejoras para legibilidad */
+    line-height: 1.4;
+    letter-spacing: 0.02em;
     overflow: hidden;
-    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita a 2 líneas */
+    -webkit-box-orient: vertical;
+    min-height: 2.5rem; /* Mantiene altura consistente */
 }
 
 .book-card-info {

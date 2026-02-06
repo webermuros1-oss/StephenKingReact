@@ -8,10 +8,7 @@ const AboutPage = () => {
 
             {/* Hero Section */}
             <section className="about-hero">
-                <div className="about-hero-bg"></div>
-                <div className="about-hero-blur1"></div>
-                <div className="about-hero-blur2"></div>
-                
+            
                 <div className="container about-hero-content">
                     <h1 className="about-hero-title">
                         MAESTRO DEL TERROR
@@ -22,25 +19,7 @@ const AboutPage = () => {
                 </div>
             </section>
 
-            {/* Poster Section */}
-            <section className="about-poster">
-                <div className="container">
-                    <div className="about-poster-wrapper">
-                        <div className="about-poster-overlay"></div>
-                        <a href="/videos/peliculaCarrie.mp4">
-                            <img
-                                src="/images/aboutHe/cartelCarrie.jpg"
-                                alt="Carrie"
-                                className="about-poster-img"
-                            />
-                        </a>
-                        <div className="about-poster-info">
-                            <h3 className="about-poster-title">CARRIE</h3>
-                            <p className="about-poster-text">Su primera novela publicada</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            
 
             {/* Biography Section */}
             <section className="about-bio">
@@ -162,6 +141,7 @@ const AboutPage = () => {
                         </div>
                     </div>
                 </div>
+                
             </section>
             
         </div>

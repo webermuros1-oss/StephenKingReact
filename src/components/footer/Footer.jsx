@@ -33,7 +33,7 @@ const Footer = () => {
                             </a>
                             <a href="https://www.instagram.com/stephenking/" target="_blank" rel="noopener noreferrer" className="footer-social-link">
                                 <div className="footer-social-glow"></div>
-                                <img src="/images/logo/InstagramIcon.png" alt="Instagram" className="footer-social-icon" />
+                                <img src="/images/logo/instagramIcon.png" alt="Instagram" className="footer-social-icon" />
                             </a>
                             <a href="https://www.linkedin.com/in/stephen-king-a393a3188/" target="_blank" rel="noopener noreferrer" className="footer-social-link">
                                 <div className="footer-social-glow"></div>
@@ -59,7 +59,7 @@ const Footer = () => {
                             <li><a href="/pdf/avisoLegal.pdf" target="_blank" rel="noopener noreferrer" className="footer-link">Aviso Legal</a></li>
                             <li><a href="/pdf/politicaPrivacidadDatos.pdf" target="_blank" rel="noopener noreferrer" className="footer-link">Privacidad</a></li>
                             <li><a href="/pdf/condicionesGeneralesVenta.pdf" target="_blank" rel="noopener noreferrer" className="footer-link">Ventas</a></li>
-                            <li><a href="/pdf/politicaCookies(3).pdf" target="_blank" rel="noopener noreferrer" className="footer-link">Cookies</a></li>
+                            <li><a href="/pdf/politicaCookies.pdf" target="_blank" rel="noopener noreferrer" className="footer-link">Cookies</a></li>
                         </ul>
                     </div>
 

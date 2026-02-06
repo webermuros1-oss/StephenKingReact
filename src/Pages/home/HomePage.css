@@ -1,40 +1,12 @@
 /* HomePage.css - CAROUSEL EN CARD PROFESIONAL */
-.home-page {
-    min-height: 100vh;
-    background: url(../../../public/images/background/red.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
 
-.home-carousel-section {
-    padding: 2rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.home-carousel-card {
-    max-width: 800px;      /* ← CARD CENTRADA Y LIMITADA */
-    width: 90%;
-    aspect-ratio: 16/9;    /* ← PROFESIONAL 16:9 */
-    position: relative;
-    border-radius: 24px;   /* ← ESQUINAS REDONDEADAS */
-    overflow: hidden;
-    box-shadow: 
-        0 25px 60px rgba(0, 0, 0, 0.6),
-        0 0 40px rgba(138, 3, 3, 0.3);
-    border: 2px solid rgba(138, 3, 3, 0.4);
-}
-
-.home-carousel-overlay {
+.home-hero-bg {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 80px;          /* ← MÁS sutil */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(138, 3, 3, 0.2), #000000, #000000);
     pointer-events: none;
+    z-index: 0;
 }
 
 .home-divider {
