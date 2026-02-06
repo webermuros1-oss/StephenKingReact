@@ -11,8 +11,8 @@ const BookCards = () => {
             try {
                 console.log('🔄 Cargando JSON...');
                 
-                // ✅ fetch() para archivos locales ES MÁS CONFIABLE
-                const response = await fetch('/cardsAndTable.json');
+                
+                const response = await fetch('public/cardsAndTable.json');
                 
                 if (!response.ok) {
                     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
@@ -21,7 +21,7 @@ const BookCards = () => {
                 const data = await response.json();
                 console.log('📚 Datos cargados:', data);
                 
-                // ✅ Soporta 2 formatos comunes
+                
                 setBooks(data.data || data.books || data || []);
                 setLoading(false);
             } catch (err) {

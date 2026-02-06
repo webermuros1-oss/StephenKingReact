@@ -6,7 +6,7 @@ const AboutPage = () => {
         <div className="about-page">
             
 
-            {/* Hero Section */}
+            
             <section className="about-hero">
             
                 <div className="container about-hero-content">
@@ -21,11 +21,11 @@ const AboutPage = () => {
 
             
 
-            {/* Biography Section */}
+            
             <section className="about-bio">
                 <div className="container">
                     <div className="about-bio-grid">
-                        {/* Image */}
+                        
                         <div className="about-bio-image-wrapper">
                             <div className="about-bio-glow"></div>
                             <div className="about-bio-image-container">
@@ -37,7 +37,7 @@ const AboutPage = () => {
                             </div>
                         </div>
 
-                        {/* Bio Content */}
+                        
                         <div className="about-bio-content">
                             <div className="about-bio-header">
                                 <h2>STEPHEN EDWIN KING</h2>
