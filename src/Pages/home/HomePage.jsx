@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import BookCards from "../../Components/BookCards/BookCards";
-import BooksTable from "../../Components/BooksTable/BooksTable";
+import BookCards from "../../components/bookCards/BookCards";
+import BooksTable from "../../components/booksTable/BooksTable";
 import "./HomePage.css";
 
 function HomePage() {
