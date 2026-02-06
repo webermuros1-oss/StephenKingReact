@@ -1,4 +1,4 @@
-/* src/components/Header.css - VERSIÓN COMPACTA */
+/* src/components/Header.css - LOGO + TÍTULO IZQUIERDA / BOTONES DERECHA */
 :root {
     --blood-red: #8a0303;
     --white: #ffffff;
@@ -16,65 +16,77 @@ header {
         0 6px 24px rgba(0, 0, 0, 0.5),
         0 0 16px rgba(138, 3, 3, 0.15);
     padding: 0.5rem 0;
-    /* ← MÁS compacto */
 }
 
 nav {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.25rem;
-    /* ← REDUCIDO */
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Contenedor principal - Logo izquierda / Botones derecha */
+.nav-main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* ← LOGO IZQUIERDA / BOTONES DERECHA */
-    height: 70px;
-    /* ← Altura fija compacta */
+    width: 100%;
+    min-height: 70px;
+    padding: 0.5rem 0;
 }
 
-/* Logo - IZQUIERDA */
+/* LOGO + TÍTULO - IZQUIERDA TOTAL */
 .logo-section {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    /* ← MENOS espacio */
+    gap: 0.85rem;
     text-decoration: none;
+    flex-shrink: 0;
 }
 
 .logo-container {
     position: relative;
-    padding: 2px;
-    /* ← Marco sutil */
 }
 
 .logo-glow {
     position: absolute;
-    inset: -2px;
-    background: var(--blood-red);
-    filter: blur(12px);
-    opacity: 0.4;
-    transition: opacity 0.3s ease;
-    border-radius: 50%;
+    inset: -4px;
+    background: linear-gradient(135deg, var(--blood-red), rgba(138, 3, 3, 0.6));
+    filter: blur(14px);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    border-radius: 14px;
 }
 
 .logo-section:hover .logo-glow {
-    opacity: 0.7;
+    opacity: 0.85;
+    filter: blur(18px);
 }
 
 .logo-img {
-    height: 42px;
-    /* ← MÁS PEQUEÑO */
+    height: 60px !important;  /* ← Aumentado de 52px a 60px */
     width: auto;
     position: relative;
     z-index: 10;
-    filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.7));
-    border-radius: 8px;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.8));
+    border-radius: 10px;
+    padding: 4px;
+    background: rgba(138, 3, 3, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.logo-section:hover .logo-img {
+    transform: translateY(-3px) scale(1.05);
+    filter: drop-shadow(0 12px 25px rgba(138, 3, 3, 0.6));
+    background: rgba(138, 3, 3, 0.25);
 }
 
 .logo-title {
     font-family: 'Creepster', cursive;
-    font-size: 1.5rem;
-    /* ← MÁS pequeño */
+    font-size: 1.6rem;  /* ← Aumentado un poco */
     font-weight: 400;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -87,19 +99,21 @@ nav {
 }
 
 @media (min-width: 768px) {
+    .logo-img {
+        height: 66px !important;  /* ← Aún más grande en desktop */
+    }
+    
     .logo-title {
-        font-size: 1.75rem;
+        font-size: 1.85rem;
     }
 }
 
-/* Desktop Navigation - DERECHA */
+/* BOTONES DESKTOP - DERECHA TOTAL */
 .desktop-nav {
     display: none;
     align-items: center;
     gap: 1.5rem;
-    /* ← MENOS espacio */
-    margin-left: auto;
-    /* ← SE EMPUJA A LA DERECHA */
+    flex-shrink: 0;
 }
 
 @media (min-width: 768px) {
@@ -108,21 +122,56 @@ nav {
     }
 }
 
+/* BOTÓN MÓVIL - DERECHA TOTAL */
+.mobile-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(138, 3, 3, 0.15);
+    border: 1px solid rgba(138, 3, 3, 0.3);
+    border-radius: 8px;
+    color: var(--white);
+    cursor: pointer;
+    padding: 0.4rem;
+    transition: all 0.25s ease;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.mobile-button:hover {
+    background: var(--blood-red);
+    box-shadow: 0 0 15px rgba(138, 3, 3, 0.5);
+    transform: scale(1.05);
+}
+
+.mobile-svg {
+    width: 24px;
+    height: 24px;
+}
+
+@media (min-width: 768px) {
+    .mobile-button {
+        display: none;
+    }
+}
+
+/* NAV LINKS (desktop + mobile) */
 .nav-link {
     position: relative;
-    padding: 0.4rem 0.8rem;
-    /* ← MÁS compacto */
+    padding: 0.5rem 1rem;
     color: var(--white);
     text-decoration: none;
     font-family: 'Cinzel', serif;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     transition: all 0.25s ease;
     border-radius: 6px;
+    display: inline-block;
 }
 
-.nav-link span {
+.nav-link-text {
     position: relative;
     z-index: 10;
 }
@@ -144,39 +193,20 @@ nav {
     background: rgba(138, 3, 3, 0.12);
 }
 
-/* Mobile Button - DERECHA */
-.mobile-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(138, 3, 3, 0.15);
-    border: 1px solid rgba(138, 3, 3, 0.3);
-    border-radius: 8px;
+.mobile-nav-link {
+    padding: 0.5rem 0.85rem;
     color: var(--white);
-    cursor: pointer;
-    padding: 0.4rem;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    border-radius: 6px;
     transition: all 0.25s ease;
-    width: 40px;
-    height: 40px;
-    margin-left: auto;
-    /* ← SE EMPUJA A LA DERECHA */
+    display: block;
 }
 
-.mobile-button:hover {
-    background: var(--blood-red);
-    box-shadow: 0 0 15px rgba(138, 3, 3, 0.5);
-    transform: scale(1.05);
-}
-
-.mobile-svg {
-    width: 24px;
-    height: 24px;
-}
-
-@media (min-width: 768px) {
-    .mobile-button {
-        display: none;
-    }
+.mobile-nav-link:hover {
+    color: var(--blood-red);
+    background: rgba(138, 3, 3, 0.15);
 }
 
 /* Mobile Navigation */
@@ -184,11 +214,12 @@ nav {
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.3s ease;
-    margin-top: 0.75rem;
+    margin-top: 0;
 }
 
 .mobile-nav.open {
-    max-height: 160px;
+    max-height: 200px;
+    margin-top: 0.75rem;
 }
 
 .mobile-nav-container {
@@ -200,19 +231,4 @@ nav {
     backdrop-filter: blur(12px);
     border-radius: 10px;
     border: 1px solid rgba(138, 3, 3, 0.25);
-}
-
-.mobile-nav-link {
-    padding: 0.4rem 0.75rem;
-    color: var(--white);
-    text-decoration: none;
-    font-family: 'Cinzel', serif;
-    font-size: 0.9rem;
-    border-radius: 6px;
-    transition: all 0.25s ease;
-}
-
-.mobile-nav-link:hover {
-    color: var(--blood-red);
-    background: rgba(138, 3, 3, 0.15);
 }

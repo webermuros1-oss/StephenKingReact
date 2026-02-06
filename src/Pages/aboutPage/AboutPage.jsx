@@ -4,7 +4,7 @@ import './AboutPage.css'
 const AboutPage = () => {
     return (
         <div className="about-page">
-            <Header />
+            
 
             {/* Hero Section */}
             <section className="about-hero">
@@ -163,43 +163,7 @@ const AboutPage = () => {
                     </div>
                 </div>
             </section>
-
-            {/* Video Section */}
-            <section className="about-video">
-                <div className="container">
-                    <div className="about-video-wrapper">
-                        <video
-                            loop
-                            controls
-                            className="about-video-element"
-                            poster="/images/video-poster.jpg"
-                        >
-                            <source src="/videos/trailerLibroFinal.mp4" type="video/mp4" />
-                        </video>
-                        
-                        <a
-                            href="https://www.amazon.es/tengas-miedo-%C3%89xitos-Stephen-King/dp/8401036836/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="about-video-overlay"
-                        >
-                            <div className="about-video-cta">
-                                <div className="about-video-icon">
-                                    <svg fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-                                        <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
-                                    </svg>
-                                </div>
-                                <span className="about-video-button">
-                                    Ver en Amazon
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <Footer />
+            
         </div>
     )
 }

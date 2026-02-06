@@ -9,30 +9,27 @@ function HomePage() {
     return (
         <div className="home-page">
             
-<Carrousel/>
             <section className="home-carousel-section">
-                
-                <div className="home-carousel-overlay"></div>
-            </section>
-
+    <div className="home-carousel-card">
+        <Carrousel />
+        <div className="home-carousel-overlay"></div>
+    </div>
+</section>
             <div className="home-divider">
                 <div className="home-divider-line"></div>
                 <div className="home-divider-content">
                     <span className="home-divider-text">Obras Destacadas</span>
                 </div>
+                <BookCards />
             </div>
-
-            <BookCards />
-
+            
             <div className="home-divider">
                 <div className="home-divider-line"></div>
                 <div className="home-divider-content">
                     <span className="home-divider-text">Biblioteca Completa</span>
                 </div>
             </div>
-
             <BooksTable />
-
             
         </div>
     );
